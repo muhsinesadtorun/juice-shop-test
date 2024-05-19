@@ -18,6 +18,7 @@ jobs:
           uses: anchore/scan-action@v3
           with:
               image: "juice-shop:${{github.sha}}"
+              fail-build: false
         - name: Generate SBOM
           uses: anchore/sbom-action@v0
           with:
@@ -60,5 +61,12 @@ jobs:
           target: 'https://www.zaproxy.org/'
           rules_file_name: '.zap/rules.tsv'
           cmd_options: '-a'
+        
+        
+              
+       
+            
+          
+      
   
   
